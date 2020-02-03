@@ -1,6 +1,6 @@
 const Joi = require('@hapi/joi')
 
-const joiSchema = {
+const joiAccountSchema = {
     email:
         Joi.email().required().min(5).max(50),
     password:
@@ -12,5 +12,5 @@ const joiSchema = {
 }
 
 module.exports = {
-    joiSchema
+    joiAccountSchema
 }
