@@ -1,0 +1,18 @@
+{
+  "name": "friday-commons",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "friday",
+    "common"
+  ],
+  "author": "Aljohn Villarubia",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.0"
+  }
+}
