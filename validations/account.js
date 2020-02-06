@@ -11,6 +11,18 @@ const joiAccountSchema = {
         Joi.string().max(100)
 }
 
+function validateAsPieces({ ...pieces }) {
+    const keys = Object.keys(pieces);
+
+    const schemaFromPieces = {}
+    for (const key of keys) {
+        schemaFromPieces[key] = { ...joiSchema }[key]
+    }
+
+    return Joi.object(schemaFromPieces).validate(pieces)
+}
+
 module.exports = {
-    joiAccountSchema
+    joiAccountSchema,
+    validateAsPieces
 }
