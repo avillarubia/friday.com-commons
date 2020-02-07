@@ -2,7 +2,7 @@ const Joi = require('@hapi/joi')
 
 const joiAccountSchema = {
     email:
-        Joi.string().email().required().min(5).max(50),
+        Joi.string().email({ tlds: { allow: false } }).required().min(5).max(50),
     password:
         Joi.string().required().min(5).max(1024),
     name:
