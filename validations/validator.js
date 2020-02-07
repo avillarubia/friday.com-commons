@@ -8,7 +8,8 @@ function validateAsPieces(joiSchema, { ...pieces }) {
         schemaFromPieces[key] = { ...joiSchema }[key]
     }
 
-    return Joi.object(schemaFromPieces).validate(pieces)
+    const { error } = Joi.object(schemaFromPieces).validate(pieces)
+    return error
 }
 
 module.exports.validateAsPieces = validateAsPieces
