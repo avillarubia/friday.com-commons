@@ -8,7 +8,9 @@ const joiAccountSchema = {
     name:
         Joi.string().required().min(2).max(100),
     bio:
-        Joi.string().max(100)
+        Joi.string().max(100),
+    photo:
+        Joi.string().max(5000)
 }
 
 function validateAsPieces({ ...pieces }) {
